@@ -76,6 +76,14 @@ Globalize.formatDate( new Date( 2010, 10, 30, 17, 55 ), { datetime: "short" }, "
 // "30.11.10 17:55"
 ```
 
+You can use instance methods to replace the locale argument.
+
+```javascript
+var de = new Globalize( "de" );
+de.formatDate( new Date( 2010, 10, 30, 17, 55 ), { datetime: "short" } );
+// "30.11.10 17:55"
+```
+
 Comparison between different locales.
 
 | locale | `Globalize.formatDate( new Date( 2010, 10, 1, 17, 55 ), { datetime: "short" } )` |

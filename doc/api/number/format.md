@@ -60,6 +60,13 @@ Globalize.formatNumber( 3.141592, {}, "es" ); // "3,142"
 Globalize.formatNumber( 3.141592, {}, "ar" ); // "3٫142"
 ```
 
+You can use instance methods to replace the locale argument.
+
+```javascript
+var es = new Globalize( "es" );
+es.formatNumber( 3.141592 ); // "3,142"
+```
+
 Controlling digits by specifying integer and fraction digits counts:
 
 ```
@@ -85,7 +92,7 @@ Globalize.formatNumber( 12345, {
 });
 // "12,300"
 
-equal( Globalize.formatNumber( 0.00012345, {
+Globalize.formatNumber( 0.00012345, {
     minimumSignificantDigits: 1,
     maximumSignificantDigits: 3
 });
